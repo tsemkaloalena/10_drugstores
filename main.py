@@ -11,7 +11,7 @@ organizations = search(address_ll, span, 'аптека', 10)
 points_param = f"{address_ll},vkbkm"
 for org in organizations:
     hours = org["properties"]["CompanyMetaData"]["Hours"]['Availabilities'][0]
-    if 'TwentyFourHours' in hours and hours['TwentyFourHours'] == True:
+    if 'TwentyFourHours' in hours and hours['TwentyFourHours']:
         color = "pm2gnl"
     elif 'Intervals' in hours:
         color = "pm2bll"
